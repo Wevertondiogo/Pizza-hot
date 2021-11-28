@@ -18,11 +18,11 @@
 
         <div id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="/">Monte sua Pizza</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="/">Contate-nos</a></li>
-                <li class="nav-item"><a class="nav-link btn" routerLink="/">login</a></li>
-                <li class="nav-item"><a routerLinkActive="active" routerLink="/cards" class="nav-link">Sabores</a></li>
-                <li class="nav-item"><a routerLinkActive="active" routerLink="/ofertas" class="nav-link">Ofertas do dia</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLinkActiveOptions]="{exact: true}"  routerLinkActive="link-active"  aria-current="page" routerLink="/" (click)="setTitle($event.target.innerText)">Monte sua Pizza</a></li>
+                <li class="nav-item"><a class="nav-link"   routerLinkActive="link-active"  routerLink="/contate-nos"(click)="setTitle($event.target.innerText)">Contate-nos</a></li>
+                <li class="nav-item"><a class="nav-link btn"   routerLinkActive="link-active"  routerLink="/login"(click)="setTitle($event.target.innerText)">login</a></li>
+                <li class="nav-item"><a  class="nav-link"   routerLinkActive="link-active" routerLink="/cards"(click)="setTitle($event.target.innerText)">Sabores</a></li>
+                <li class="nav-item"><a class="nav-link"    routerLinkActive="link-active"  routerLink="/ofertas"(click)="setTitle($event.target.innerText)">Ofertas do dia</a></li>
             </ul>
         </div>
     </div>
